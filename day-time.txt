@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <title>day and time</title>
+    </head>
+    <body>
+        <h2>hi letsUpgrade </h2>
+        <p>today:<span id="day"></span></p>
+        <p>time is:<span id="hours"></span></p>
+        <button onclick="dattime()">click to see dat and time</button>
+       <script>
+           function dattime()
+           {
+             var a=new Date();
+             var houes=a.getHours();
+             var min=a.getMinutes();
+             var sec=a.getSeconds();
+             var time=houes+"."+min+"."+sec;
+             var day=["mon","tue","wen","thus","fri","sta","sun"];
+             document.getElementById("day").innerHTML=day[a.getDay()];
+             document.getElementById("hours").innerHTML=time;
+           } 
+    </script>
+    </body>
+</html>
